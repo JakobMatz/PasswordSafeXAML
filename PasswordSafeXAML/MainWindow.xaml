@@ -12,7 +12,7 @@
              HorizontalAlignment="Left" 
              Width="300" Height="25"
              Margin="184,200,0,197.5" />
-        <Button Name="btn1" Background="LightBlue" 
+        <Button Name="btn_Login" Background="LightBlue" 
         BorderBrush="Black" BorderThickness="1" 
         Click="OnClick1" Content="Login"
         Command="{Binding LoginCommand}"
