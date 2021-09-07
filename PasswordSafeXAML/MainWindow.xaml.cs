@@ -24,7 +24,10 @@ namespace PasswordSafeXAML
         {
             InitializeComponent();
         }
-
+        void OnClick1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("lol");
+        }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
