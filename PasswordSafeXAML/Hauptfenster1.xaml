@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        
+        <Grid>
+            <Grid Margin="0,0,0,342.5" RenderTransformOrigin="0.818,1.003">
+                
+            </Grid>
+            <Grid Margin="0,0,671,0.5">
+                
+            </Grid>
+            <Grid Margin="129,80,0,0.5">
+                
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
