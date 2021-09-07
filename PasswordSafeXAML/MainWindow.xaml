@@ -8,6 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Login" HorizontalAlignment="Left" Margin="363,342,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="PasswordSafe" HorizontalAlignment="Left" Margin="252,40,0,0" VerticalAlignment="Top" Width="299" FontSize="48"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="311,218,0,0" TextWrapping="Wrap" Text="Passwort" VerticalAlignment="Top" Width="183" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Window>
