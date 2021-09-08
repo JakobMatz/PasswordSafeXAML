@@ -24,13 +24,21 @@ namespace PasswordSafeXAML
         {
             InitializeComponent();
         }
-        void OnClick1(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("lol");
-        }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void btn_Login_Click(object sender, RoutedEventArgs e)
+        {
+
+            Window1 win = new Window1();
+            win.Show();
+
+            
+
+            this.Close();
         }
     }
 }

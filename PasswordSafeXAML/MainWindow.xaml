@@ -15,6 +15,8 @@
         <Button Name = "btn_Login" Content="Login"
         Command="{Binding LoginCommand}"
         CommandParameter="{Binding ElementName=PasswordBox}"
-        Height="35" Margin="514,194,167,193.5"/>
+        Height="35" Margin="514,194,167,193.5" Click="btn_Login_Click" RenderTransformOrigin="0.502,0.505"/>
+
+
     </Grid>
 </Window>
