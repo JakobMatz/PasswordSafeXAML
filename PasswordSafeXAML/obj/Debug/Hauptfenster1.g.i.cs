@@ -72,7 +72,7 @@ namespace PasswordSafeXAML {
             {
             case 1:
             
-            #line 22 "..\..\Hauptfenster1.xaml"
+            #line 25 "..\..\Hauptfenster1.xaml"
             ((System.Windows.Controls.ListBox)(target)).SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ListBox_SelectionChanged);
             
             #line default
