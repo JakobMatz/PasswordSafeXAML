@@ -36,8 +36,6 @@ namespace PasswordSafeXAML
             Window1 win = new Window1();
             win.Show();
 
-            
-
             this.Close();
         }
     }
