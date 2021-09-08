@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordSafeXAML"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="476" Width="788">
     <Grid>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="363,342,0,0" VerticalAlignment="Top" Width="75"/>
-
+        <Label Content="PasswordSafe" HorizontalAlignment="Left" Margin="252,40,0,0" VerticalAlignment="Top" Width="299" FontSize="48"/>
+        <PasswordBox x:Name="PasswordBox"
+             HorizontalAlignment="Left" 
+             Width="300"
+             Height="35" Margin="167,194,0,193.5"/>
+        <Button Name = "btn_Login" Content="Login"
+        Command="{Binding LoginCommand}"
+        CommandParameter="{Binding ElementName=PasswordBox}"
+        Height="35" Margin="514,194,167,193.5"/>
     </Grid>
 </Window>
