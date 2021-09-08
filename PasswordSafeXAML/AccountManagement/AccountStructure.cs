@@ -8,5 +8,9 @@ namespace PasswordSafeXAML.AccountManagement
 {
     class AccountStructure
     {
+        //AccountName
+        public string AccountName { get; set; }
+
+        //Account eMails
     }
 }
