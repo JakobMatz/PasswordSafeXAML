@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace PasswordSafeXAML
 {
-    class Login
+    public class Login
     {
-        private string _pw = "";
-        public Login(string pw)
+        static private string _pw = "";
+        public static bool loginTry(string pw)
         {
             _pw = pw;
+            return pwCheck();
         }
-        private bool pwCheck()
+        static private bool pwCheck()
         {
             string password = "asdf";
 

@@ -24,21 +24,30 @@ namespace PasswordSafeXAML
         {
             InitializeComponent();
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void OnKeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.Key == Key.Return)
+            {
+                btn_Login_Click(sender, e);
+            }
         }
-
+        private void TextBox_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+                        
+        }
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(PasswordBox.Password);
+            if (Login.loginTry(PasswordBox.Password))
+            {
+                Window1 win = new Window1();
+                win.Show();
 
-            Window1 win = new Window1();
-            win.Show();
-
+                this.Close();
+            } else {
+                MessageBox.Show("Falsches Passwort");
+            }
             
-
-            this.Close();
         }
     }
 }
