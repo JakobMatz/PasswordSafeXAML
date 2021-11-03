@@ -9,6 +9,15 @@ namespace PasswordSafeXAML
     class Entry
     {
         private string username;
+        private string loginname;
+        private string password;
+        private string website;
+        private string description;
+
+        public Entry(string domain)
+        {
+            website = domain;
+        }
 
     }
 }
