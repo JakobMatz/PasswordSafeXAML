@@ -1,3 +1,4 @@
 db.lock
 *.cache
 *.suo
+.suo
