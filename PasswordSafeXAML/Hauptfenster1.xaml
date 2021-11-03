@@ -21,6 +21,12 @@
                     <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,186,42,0" Width="110"/>
                 </Grid>
                 <Grid>
+                    <Button Content="Username kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,237,42,0" Width="110"/>
+                </Grid>
+                <Grid>
+                    <Button Content="Passwort kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,237,42,0" Width="110"/>
+                </Grid>
+                <Grid>
                     <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
                 </Grid>
             </Grid>
