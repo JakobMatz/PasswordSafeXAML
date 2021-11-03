@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordSafeXAML"
         mc:Ignorable="d"
-        Title="Hauptfenster" Height="450" Width="800">
+        Title="Hauptfenster" Height="720" Width="1280">
     <Grid>
         <Grid>
-            <Grid Margin="0,0,671,0.5">
-                <Label Content="Toolbox" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24"></Label>
-                <Grid>
-                    <Button Content="Account hinzufügen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="10,56,4,0"/>
-                </Grid>
-                <Grid>
-                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="10,106,4,0" Width="110"/>
-                </Grid>
-                <Grid>
-                    <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="10,157,4,0" Width="110"/>
-                </Grid>
-            </Grid>
-            <Grid Margin="129,0,0,365.5" RenderTransformOrigin="0.818,1.003">
-                <Label Content="Accounts" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24"></Label>
+            <Grid VerticalAlignment="Top" Height="75">
+                <Label Content="Accounts" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"></Label>
 
             </Grid>
-            <Grid Margin="129,57,0,0.5">
+            <Grid HorizontalAlignment="Left" Width="200">
+                <Label Content="Toolbox" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Margin="0,20,0,0"></Label>
+                <Grid>
+                    <Button Content="Account hinzufügen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,80,42,0"/>
+                </Grid>
+                <Grid>
+                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,186,42,0" Width="110"/>
+                </Grid>
+                <Grid>
+                    <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
+                </Grid>
+            </Grid>
+            <Grid Margin="205,75,0,0">
                 <ListBox SelectionChanged="ListBox_SelectionChanged">
                     <ListBoxItem Content="TestAccount1"/>
                     <ListBoxItem Content="TestAccount2"/>
