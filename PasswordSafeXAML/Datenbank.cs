@@ -8,6 +8,6 @@ namespace PasswordSafeXAML
 {
     class Datenbank
     {
-        public string Test;
+       
     }
 }
