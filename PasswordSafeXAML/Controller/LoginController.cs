@@ -14,14 +14,14 @@ namespace PasswordSafeXAML.Controller
         private static List<LoginModel> LoginData = new List<LoginModel>();
         public static void newLogin(string eMail, string loginname, string password, string website, string description)
         {
-            MessageBox.Show(eMail);
             LoginData.AddRange(new List<LoginModel> {
             new LoginModel(eMail,loginname,password,website,description)
             });
+            MessageBox.Show(LoginData.ToString());
 
             try
             {
-                FileStream addLoginData = new FileStream("AddedLogins.txt", FileMode.OpenOrCreate);
+                FileStream addLoginData = new FileStream("AddedLogins.csv", FileMode.OpenOrCreate);
                 using (StreamWriter ASKYWRITE = new StreamWriter(addLoginData))
                 {
                     ASKYWRITE.Write(eMail + "\r\n");
