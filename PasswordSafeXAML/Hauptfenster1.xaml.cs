@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PasswordSafeXAML.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,12 @@ namespace PasswordSafeXAML
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddLoginView win = new AddLoginView();
+            win.Show();
         }
     }
 }
