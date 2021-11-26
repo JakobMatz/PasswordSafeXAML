@@ -8,3 +8,11 @@ db.lock
 *.lref
 .vs/PasswordSafeXAML/v16/.suo
 .vs/PasswordSafeXAML/v16/.suo
+PasswordSafeXAML/bin/Debug/AddedLogins.csv
+PasswordSafeXAML/bin/Debug/PasswordSafeXAML.exe
+PasswordSafeXAML/bin/Debug/PasswordSafeXAML.exe
+PasswordSafeXAML/bin/Debug/PasswordSafeXAML.pdb
+*.cache
+PasswordSafeXAML/obj/Debug/PasswordSafeXAML.exe
+PasswordSafeXAML/obj/Debug/PasswordSafeXAML.pdb
+PasswordSafeXAML/obj/Debug/PasswordSafeXAML_MarkupCompile.i.cache

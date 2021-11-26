@@ -17,7 +17,7 @@ namespace PasswordSafeXAML.Controller
             LoginData.AddRange(new List<LoginModel> {
             new LoginModel(eMail,loginname,password,website,description)
             });
-            MessageBox.Show(LoginData.ToString());
+            //MessageBox.Show(LoginData.ToString());
 
             try
             {
