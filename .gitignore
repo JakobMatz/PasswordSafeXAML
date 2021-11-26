@@ -8,3 +8,4 @@ db.lock
 *.lref
 .vs/PasswordSafeXAML/v16/.suo
 .vs/PasswordSafeXAML/v16/.suo
+PasswordSafeXAML/bin/Debug/AddedLogins.csv
