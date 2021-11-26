@@ -24,11 +24,12 @@ namespace PasswordSafeXAML.Controller
                 FileStream addLoginData = new FileStream("AddedLogins.csv", FileMode.OpenOrCreate);
                 using (StreamWriter ASKYWRITE = new StreamWriter(addLoginData))
                 {
-                    ASKYWRITE.Write(eMail + "\r\n");
-                    ASKYWRITE.Write(loginname + "\r\n");
-                    ASKYWRITE.Write(password + "\r\n");
-                    ASKYWRITE.Write(website + "\r\n");
-                    ASKYWRITE.Write(description + "\r\n");
+                    ASKYWRITE.Write("eMail,loginname,password,website,description" + "\r\n");
+                    ASKYWRITE.Write(eMail + ",");
+                    ASKYWRITE.Write(loginname + ",");
+                    ASKYWRITE.Write(password + ",");
+                    ASKYWRITE.Write(website + ",");
+                    ASKYWRITE.Write(description + ",");
                 }
             }
             catch (Exception exc)
