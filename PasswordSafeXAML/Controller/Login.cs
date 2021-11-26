@@ -8,7 +8,7 @@ namespace PasswordSafeXAML
 {
     public class Login
     {
-        static private string _pw = "";
+    static private string _pw = "";
         public static bool loginTry(string pw)
         {
             _pw = pw;
@@ -22,7 +22,6 @@ namespace PasswordSafeXAML
             {
                 return true;
             }
-
             return false;
         }
     }

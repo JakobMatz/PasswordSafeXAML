@@ -1,7 +1,15 @@
 db.lock
 *.cache
 *.suo
-.vs/*
 .vs/PasswordSafeXAML/v16/.suo
+*.cache
+.vs/PasswordSafeXAML/v16/.suo
+*.cache
+.vs/*
+*.lref
+.vs/PasswordSafeXAML/v16/.suo
+.vs/PasswordSafeXAML/v16/.suo
+PasswordSafeXAML/bin/Debug/AddedLogins.csv
+*.cache
 *.cache
 .vs/PasswordSafeXAML/v16/.suo
