@@ -7,16 +7,18 @@
         mc:Ignorable="d"
         Title="AddLoginView" Height="450" Width="800">
     <Grid>
-        <Label Content="eMail:" HorizontalAlignment="Left" Margin="41,50,0,0" VerticalAlignment="Top" Width="44"/>
-        <TextBox x:Name="eMail" HorizontalAlignment="Left" Height="23" Margin="41,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Loginname:" HorizontalAlignment="Left" Margin="41,109,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox x:Name="loginname" HorizontalAlignment="Left" Height="23" Margin="41,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Passwort:" HorizontalAlignment="Left" Margin="41,168,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="41,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Website:" HorizontalAlignment="Left" Margin="41,227,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox x:Name="website" HorizontalAlignment="Left" Height="23" Margin="41,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Beschreibung:" HorizontalAlignment="Left" Margin="41,286,0,0" VerticalAlignment="Top" Width="99"/>
-        <TextBox x:Name="description" HorizontalAlignment="Left" Height="23" Margin="41,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Account Name" HorizontalAlignment="Left" Margin="41,35,0,0" VerticalAlignment="Top" Width="99"/>
+        <TextBox x:Name="Accountname" HorizontalAlignment="Left" Height="23" Margin="41,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
+        <Label Content="eMail:" HorizontalAlignment="Left" Margin="41,100,0,0" VerticalAlignment="Top" Width="44"/>
+        <TextBox x:Name="eMail" HorizontalAlignment="Left" Height="23" Margin="41,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Loginname:" HorizontalAlignment="Left" Margin="41,159,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="loginname" HorizontalAlignment="Left" Height="23" Margin="41,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Passwort:" HorizontalAlignment="Left" Margin="41,218,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="41,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Website:" HorizontalAlignment="Left" Margin="41,277,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="website" HorizontalAlignment="Left" Height="23" Margin="41,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Beschreibung:" HorizontalAlignment="Left" Margin="41,336,0,0" VerticalAlignment="Top" Width="99"/>
+        <TextBox x:Name="description" HorizontalAlignment="Left" Height="23" Margin="41,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="341" TextChanged="TextBox_TextChanged"/>
         <Button Content="Save" HorizontalAlignment="Left" Height="36" Margin="587,361,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click"/>
 
     </Grid>

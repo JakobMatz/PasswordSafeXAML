@@ -26,6 +26,7 @@ namespace PasswordSafeXAML.Views
         private string passwortInput;
         private string websiteInput;
         private string descriptionInput;
+        private string accountnameInput;
         public AddLoginView()
         {
             InitializeComponent();
@@ -38,13 +39,14 @@ namespace PasswordSafeXAML.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.accountnameInput = Accountname.Text;
             this.eMailInput = eMail.Text;
             this.loginnameInput = loginname.Text;
             this.passwortInput = password.Text;
             this.websiteInput = website.Text;
             this.descriptionInput = description.Text;
 
-            Controller.LoginController.newLogin(this.eMailInput,this.loginnameInput,this.passwortInput, 
+            Controller.LoginController.newLogin(this.accountnameInput,this.eMailInput,this.loginnameInput,this.passwortInput, 
                 this.websiteInput, this.descriptionInput);
         }
     }
