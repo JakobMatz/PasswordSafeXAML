@@ -21,7 +21,6 @@ namespace PasswordSafeXAML
     /// </summary>
     /// 
 
-
     public class TableNames
 
     {
