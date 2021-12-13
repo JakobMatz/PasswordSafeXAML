@@ -29,9 +29,12 @@
                 <Grid>
                     <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
                 </Grid>
+                <Grid>
+                    <Button Content="CSV Laden" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,601,42,0" Width="110" Click="Button_Click_1"/>
+                </Grid>
             </Grid>
             <Grid Margin="205,75,0,0">
-                <ListBox SelectionChanged="ListBox_SelectionChanged">
+                <ListBox x:Name="ListBox1" SelectionChanged="ListBox_SelectionChanged">
                     <ListBoxItem Content="TestAccount1"/>
                     <ListBoxItem Content="TestAccount2"/>
                     <ListBoxItem Content="TestAccount3"/>
