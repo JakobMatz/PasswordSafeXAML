@@ -35,9 +35,6 @@
             </Grid>
             <Grid Margin="205,75,0,0">
                 <ListBox x:Name="ListBox1" SelectionChanged="ListBox_SelectionChanged">
-                    <ListBoxItem Content="TestAccount1"/>
-                    <ListBoxItem Content="TestAccount2"/>
-                    <ListBoxItem Content="TestAccount3"/>
                 </ListBox>
             </Grid>
         </Grid>

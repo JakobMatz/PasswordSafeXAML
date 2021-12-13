@@ -75,7 +75,7 @@ namespace PasswordSafeXAML
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            List<TableNames> values = File.ReadAllLines("C:\\Users\\jakob\\Documents\\git\\PasswordSafeXAML\\PasswordSafeXAML\\bin\\Debug\\LoginDaten.csv")
+            List<TableNames> values = File.ReadAllLines("LoginDaten.csv")
 
                               .Skip(1)
 
