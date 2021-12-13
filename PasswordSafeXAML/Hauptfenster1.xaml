@@ -18,7 +18,7 @@
                     <Button Content="Account hinzufügen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,80,42,0" Click="Button_Click"/>
                 </Grid>
                 <Grid>
-                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,186,42,0" Width="110"/>
+                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,185,42,0" Width="110"/>
                 </Grid>
                 <Grid>
                     <Button Content="Username kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,237,42,0" Width="110"/>
@@ -29,13 +29,20 @@
                 <Grid>
                     <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
                 </Grid>
+                <Grid>
+                    <Button Content="Load csv" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
+                </Grid>
             </Grid>
             <Grid Margin="205,75,0,0">
-                <ListBox SelectionChanged="ListBox_SelectionChanged">
-                    <ListBoxItem Content="TestAccount1"/>
-                    <ListBoxItem Content="TestAccount2"/>
-                    <ListBoxItem Content="TestAccount3"/>
-                </ListBox>
+                <ListView HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1067">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+
             </Grid>
         </Grid>
     </Grid>
