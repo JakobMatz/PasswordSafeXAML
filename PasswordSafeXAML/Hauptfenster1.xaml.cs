@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -45,25 +46,34 @@ namespace PasswordSafeXAML
 
         }
 
+
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             {
+                bool fileExist = File.Exists("LoginDaten.csv");
 
-                List<example> values = File.ReadAllLines("LoginDaten.csv")
-
-                                              .Skip(1)
-
-                                              .Select(v => example.FromCsv(v))
-
-                                              .ToList();
-
-                foreach (var item in values)
-
+                if(fileExist)
                 {
+                    List<example> values = File.ReadAllLines("LoginDaten.csv")
 
-                    listView1.Items.Add(new { accountname = item.t1, email =  item.t2, loginname = item.t3, password = item.t4, website = item.t5, description = item.t6});
+                              .Skip(1)
 
+                              .Select(v => example.FromCsv(v))
+
+                              .ToList();
+
+                    foreach (var item in values)
+
+                    {
+
+                        listView1.Items.Add(new { accountname = item.t1, email = item.t2, loginname = item.t3, password = item.t4, website = item.t5, description = item.t6 });
+
+                    }
+                } else
+                {
+                    MessageBox.Show("No Datafile found!");
                 }
+
 
             }
         }
@@ -109,6 +119,23 @@ namespace PasswordSafeXAML
 
             }
 
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var selection = listView1.SelectedItem;
+
+            //Im selection kommt das ausgeählte schonmal an ^^
         }
     }
 }

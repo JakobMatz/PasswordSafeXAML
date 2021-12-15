@@ -8,7 +8,7 @@ db.lock
 *.lref
 /.vs/PasswordSafeXAML/v16/.suo
 /.vs/PasswordSafeXAML/v16/.suo
-PasswordSafeXAML/bin/Debug/AddedLogins.csv
+/PasswordSafeXAML/bin/Debug/AddedLogins.csv
 *.cache
 *.cache
 /.vs/PasswordSafeXAML/v16/.suo
