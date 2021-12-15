@@ -30,14 +30,19 @@
                     <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
                 </Grid>
                 <Grid>
-                    <Button Content="Load csv" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
+                    <Button x:Name="LoadCSV" Content="Load csv" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
                 </Grid>
             </Grid>
             <Grid Margin="205,75,0,0">
-                <ListView HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1067">
+                <ListView x:Name="listView1" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1067">
                     <ListView.View>
-                        <GridView>
-                            <GridViewColumn/>
+                        <GridView x:Name="MyGridView">
+                            <GridViewColumn Header="Accountname" DisplayMemberBinding="{Binding accountname}" Width="180" />
+                            <GridViewColumn Header="eMail" DisplayMemberBinding="{Binding email}" Width="180" />
+                            <GridViewColumn Header="LoginName" DisplayMemberBinding="{Binding loginname}" Width="180" />
+                            <GridViewColumn Header="Password" DisplayMemberBinding="{Binding password}" Width="180" />
+                            <GridViewColumn Header="Website" DisplayMemberBinding="{Binding website}" Width="180" />
+                            <GridViewColumn Header="Beschreibung" DisplayMemberBinding="{Binding description}" Width="180" />
                         </GridView>
                     </ListView.View>
                 </ListView>
