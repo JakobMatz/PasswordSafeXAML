@@ -37,7 +37,7 @@ namespace PasswordSafeXAML
         }
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(PasswordBox.Password);
+            //MessageBox.Show(PasswordBox.Password);
             if (Login.loginTry(PasswordBox.Password))
             {
                 Window1 win = new Window1();

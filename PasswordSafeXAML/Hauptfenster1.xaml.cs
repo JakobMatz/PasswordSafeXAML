@@ -28,6 +28,7 @@ namespace PasswordSafeXAML
         public Window1()
         {
             InitializeComponent();
+            loadData();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -49,10 +50,15 @@ namespace PasswordSafeXAML
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            loadData();
+        }
+
+        private void loadData()
+        {
             {
                 bool fileExist = File.Exists("LoginDaten.csv");
 
-                if(fileExist)
+                if (fileExist)
                 {
                     List<example> values = File.ReadAllLines("LoginDaten.csv")
 
@@ -69,7 +75,8 @@ namespace PasswordSafeXAML
                         listView1.Items.Add(new { accountname = item.t1, email = item.t2, loginname = item.t3, password = item.t4, website = item.t5, description = item.t6 });
 
                     }
-                } else
+                }
+                else
                 {
                     MessageBox.Show("No Datafile found!");
                 }
