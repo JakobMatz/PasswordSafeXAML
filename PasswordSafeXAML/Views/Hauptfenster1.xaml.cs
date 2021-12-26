@@ -142,7 +142,8 @@ namespace PasswordSafeXAML
         {
             var selection = listView1.SelectedItem;
 
-            //Im selection kommt das ausgeählte schonmal an ^^
+
+            //Im selection kommt das ausgewählte schonmal an ^^
         }
     }
 }

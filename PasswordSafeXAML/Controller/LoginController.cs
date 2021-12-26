@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using CsvHelper;
+using PasswordSafeXAML.Views;
 
 namespace PasswordSafeXAML.Controller
 {
@@ -53,6 +54,11 @@ namespace PasswordSafeXAML.Controller
                     }
                 }
             }
+        }
+
+        public void loadData()
+        {
+            
         }
     }
 }

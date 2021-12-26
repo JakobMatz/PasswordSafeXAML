@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PasswordSafeXAML.Views;
 
 namespace PasswordSafeXAML.Views
 {
@@ -27,6 +28,8 @@ namespace PasswordSafeXAML.Views
         private string websiteInput;
         private string descriptionInput;
         private string accountnameInput;
+
+
         public AddLoginView()
         {
             InitializeComponent();
@@ -48,6 +51,7 @@ namespace PasswordSafeXAML.Views
 
             Controller.LoginController.newLogin(this.accountnameInput,this.eMailInput,this.loginnameInput,this.passwortInput, 
                 this.websiteInput, this.descriptionInput);
+
         }
     }
 }

@@ -12,3 +12,5 @@ db.lock
 *.cache
 *.cache
 /.vs/PasswordSafeXAML/v16/.suo
+PasswordSafeXAML/bin/Debug/PasswordSafeXAML.exe
+PasswordSafeXAML/obj/Debug/PasswordSafeXAML.exe
