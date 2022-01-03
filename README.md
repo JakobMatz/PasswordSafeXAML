@@ -34,3 +34,7 @@ To see Debugging info, start the Visual Studio project and run the app from ther
 
 ### Extradition
 The release of the application is done by building the program with Visual Studio Start Button in the top. After that the .exe-File can be found in the project's /bin/Debug/ folder. This file can then be distributed.
+
+
+##License
+This software is distributed under GNU GPL3.0
