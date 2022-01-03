@@ -12,7 +12,7 @@ https://github.com/JakobMatz/PasswordSafeXAML.git
 
 ### Starting the project
 After the project is cloned, it can be built and edited by opening the
-File "PasswordSafeXAML.sln" in the main Git Directory.
+File "PasswordSafeXAML.sln" in the main Git directory.
 To start the project no additional software or databases are needed, the project should run as-is.
 
 ### Maintenance
