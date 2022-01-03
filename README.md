@@ -28,12 +28,9 @@ application itself. Those tests don't have to be further automated
 because of the simplicity of the app.
 
 ### Repair
-When the App is unable to run properly, debugging may be necessary via the Visual Studio
-Debugging menu.
-
-• Sie soll die implementierten Worklflows auf technischer Ebene skizzieren, z.B. PlantUML-Diagrammen o.ä.
-• Sie soll Auskunft zu Debugginginformation geben. Wo sind Logdateien zu finden? Wie verwendet man Testdaten oder -Queries? Wie muss das Projekt konfiguriert/gestartet werden um erweiterte Logausgaben im Falle einer Fehlersuche zu erhalten?
-• Sie soll Hiweise zur Möglichkeit manueller Tests enthalten.
+When the App is unable to run properly, debugging may be necessary via the Visual Studio Debugging menu. Manual testing can be done by adding and removing entries to the PasswordSafe.
+If you want to insert your own csv database for the program, place the file in this directory: PasswordSafeXAML/PasswordSafeXAML/bin/Debug/ and name the file "LoginDaten.csv"
+To see Debugging info, start the Visual Studio project and run the app from there. When errors do occur, the Debugging Manager will open to assist you finding the error.
 
 ### Extradition
-• Sie soll den Auslieferungsprozess beschreiben. Also wie ein Release erzeugt/ausgeliefert werden kann.
+The release of the application is done by building the program with Visual Studio Start Button in the top. After that the .exe-File can be found in the project's /bin/Debug/ folder. This file can then be distributed.
