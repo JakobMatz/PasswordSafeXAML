@@ -31,6 +31,7 @@ namespace PasswordSafeXAML.Controller
                 bool fileExist = File.Exists("LoginDaten.csv");
                 if (fileExist)
                 {
+                    
                     using (var writer = new StreamWriter("LoginDaten.csv", true))
                     {
                         using (var csv = new CsvWriter(writer))

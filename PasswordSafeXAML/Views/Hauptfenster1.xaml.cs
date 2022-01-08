@@ -8,6 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -93,7 +94,7 @@ namespace PasswordSafeXAML
                 }
                 else
                 {
-                    MessageBox.Show("No Datafile found!");
+                    MessageBox.Show("No Datafile found! One will be created!");
                 }
 
 
@@ -150,25 +151,30 @@ namespace PasswordSafeXAML
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            var selection = listView1.SelectedItem;
-
-
+            var selection = Convert.ToString(listView1.SelectedItem);
+            selection = selection.Replace(",", "");
+            selection = selection.Replace("=", "");
+            string[] allEntriesArray = selection.Split(' ');
+            string username = allEntriesArray[9];
+            System.Windows.Clipboard.SetText(username);
             //Im selection kommt das ausgewählte schonmal an ^^
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            var selection = Convert.ToString(listView1.SelectedItem);
+            selection = selection.Replace(",", "");
+            selection = selection.Replace("=", "");
+            string[] allEntriesArray = selection.Split(' ');
+            string password = allEntriesArray[12];
+            System.Windows.Clipboard.SetText(password);
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             listView1.Items.RemoveAt(listView1.SelectedIndex);
 
-            // Hier entweder ListView zu List machen und dann an Controller zum Speichern senden oder irgendwie direkt speichern.
-
             ExportToCsv(listView1);
-
-/*            List<string> items = new List<string>();
-            foreach (ListViewItem itm in listView1.Items)
-            {
-                items.Add(itm.ToString());
-            }*/
         }
 
         private void ExportToCsv(ListView listView)
@@ -192,5 +198,6 @@ namespace PasswordSafeXAML
             }
             File.WriteAllText("LoginDaten.csv", sb.ToString());
         }
+
     }
 }

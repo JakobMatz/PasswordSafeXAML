@@ -52,7 +52,7 @@ namespace PasswordSafeXAML.Views
             Controller.LoginController.newLogin(this.accountnameInput,this.eMailInput,this.loginnameInput,this.passwortInput, 
                 this.websiteInput, this.descriptionInput);
 
-            
+            this.Close();
             
         }
     }
