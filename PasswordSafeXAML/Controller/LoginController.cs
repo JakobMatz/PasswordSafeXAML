@@ -59,10 +59,5 @@ namespace PasswordSafeXAML.Controller
                 }
             }
         }
-
-        public void loadData()
-        {
-            
-        }
     }
 }

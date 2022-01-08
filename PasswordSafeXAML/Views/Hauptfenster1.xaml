@@ -34,7 +34,7 @@
                 </Grid>
             </Grid>
             <Grid Margin="205,75,0,0">
-                <ListView x:Name="listView1" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1067" SelectionChanged="listView1_SelectionChanged">
+                <ListView x:Name="listView1" HorizontalAlignment="Left" Width="1067">
                     <ListView.View>
                         <GridView x:Name="MyGridView">
                             <GridViewColumn Header="Accountname" DisplayMemberBinding="{Binding accountname}" Width="180" />

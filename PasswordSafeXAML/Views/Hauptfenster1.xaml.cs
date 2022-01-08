@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -147,11 +148,6 @@ namespace PasswordSafeXAML
 
         }
 
-        private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             var selection = listView1.SelectedItem;
@@ -164,15 +160,37 @@ namespace PasswordSafeXAML
         {
             listView1.Items.RemoveAt(listView1.SelectedIndex);
 
-            // Hier entweder ListView zu List machen und dann an Controller zum Speichern senden oder irgendwie direkt speichern
+            // Hier entweder ListView zu List machen und dann an Controller zum Speichern senden oder irgendwie direkt speichern.
 
-            List<string> items = new List<string>();
+            ExportToCsv(listView1);
+
+/*            List<string> items = new List<string>();
             foreach (ListViewItem itm in listView1.Items)
             {
                 items.Add(itm.ToString());
+            }*/
+        }
+
+        private void ExportToCsv(ListView listView)
+        {
+            StringBuilder sb = new StringBuilder();
+            GridView gv = listView.View as GridView;
+            sb.Append("accountname;eMail;loginname;password;website;description");
+            sb.Append(Environment.NewLine);
+            for (int i = 0; i < listView.Items.Count; ++i)
+            {
+                Type t = listView.Items[i].GetType();
+                foreach (GridViewColumn gc in gv.Columns)
+                {
+                    string bindingPath = (gc.DisplayMemberBinding as Binding).Path.Path;
+                    PropertyInfo pi = listView.Items[i].GetType().GetProperty(bindingPath);
+                    string value = pi.GetValue(listView.Items[i]).ToString();
+                    sb.Append(value);
+                    sb.Append(";");
+                }
+                sb.Append(Environment.NewLine);
             }
-
-
+            File.WriteAllText("LoginDaten.csv", sb.ToString());
         }
     }
 }
