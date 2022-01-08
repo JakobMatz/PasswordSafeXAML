@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,6 +31,18 @@ namespace PasswordSafeXAML
         {
             InitializeComponent();
             loadData();
+        }
+
+        public void refresh()
+        {
+            if(File.Exists("LoginDaten.csv"))
+            {
+                loadData();
+            }
+            else
+            {
+
+            }
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -60,6 +74,8 @@ namespace PasswordSafeXAML
 
                 if (fileExist)
                 {
+                    listView1.Items.Clear();
+                    
                     List<example> values = File.ReadAllLines("LoginDaten.csv")
 
                               .Skip(1)
@@ -71,14 +87,14 @@ namespace PasswordSafeXAML
                     foreach (var item in values)
 
                     {
-
+                        
                         listView1.Items.Add(new { accountname = item.t1, email = item.t2, loginname = item.t3, password = item.t4, website = item.t5, description = item.t6 });
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No Datafile found!");
+                    MessageBox.Show("No Datafile found! One will be created!");
                 }
 
 
@@ -133,17 +149,55 @@ namespace PasswordSafeXAML
 
         }
 
-        private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            var selection = listView1.SelectedItem;
-
-
+            var selection = Convert.ToString(listView1.SelectedItem);
+            selection = selection.Replace(",", "");
+            selection = selection.Replace("=", "");
+            string[] allEntriesArray = selection.Split(' ');
+            string username = allEntriesArray[9];
+            System.Windows.Clipboard.SetText(username);
             //Im selection kommt das ausgewählte schonmal an ^^
         }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            var selection = Convert.ToString(listView1.SelectedItem);
+            selection = selection.Replace(",", "");
+            selection = selection.Replace("=", "");
+            string[] allEntriesArray = selection.Split(' ');
+            string password = allEntriesArray[12];
+            System.Windows.Clipboard.SetText(password);
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            listView1.Items.RemoveAt(listView1.SelectedIndex);
+
+            ExportToCsv(listView1);
+        }
+
+        private void ExportToCsv(ListView listView)
+        {
+            StringBuilder sb = new StringBuilder();
+            GridView gv = listView.View as GridView;
+            sb.Append("accountname;eMail;loginname;password;website;description");
+            sb.Append(Environment.NewLine);
+            for (int i = 0; i < listView.Items.Count; ++i)
+            {
+                Type t = listView.Items[i].GetType();
+                foreach (GridViewColumn gc in gv.Columns)
+                {
+                    string bindingPath = (gc.DisplayMemberBinding as Binding).Path.Path;
+                    PropertyInfo pi = listView.Items[i].GetType().GetProperty(bindingPath);
+                    string value = pi.GetValue(listView.Items[i]).ToString();
+                    sb.Append(value);
+                    sb.Append(";");
+                }
+                sb.Append(Environment.NewLine);
+            }
+            File.WriteAllText("LoginDaten.csv", sb.ToString());
+        }
+
     }
 }

@@ -18,23 +18,23 @@
                     <Button Content="Account hinzufügen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,80,42,0" Click="Button_Click"/>
                 </Grid>
                 <Grid>
-                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,185,42,0" Width="110"/>
+                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,185,42,0" Width="110" Click="Button_Click_5"/>
                 </Grid>
                 <Grid>
                     <Button Content="Username kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,237,42,0" Width="110" Click="Button_Click_4"/>
                 </Grid>
                 <Grid>
-                    <Button Content="Passwort kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,289,42,0" Width="110"/>
+                    <Button Content="Passwort kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,289,42,0" Width="110" Click="Button_Click_6"/>
                 </Grid>
                 <Grid>
                     <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
                 </Grid>
                 <Grid>
-                    <Button x:Name="LoadCSV" Content="Load csv" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
+                    <Button x:Name="LoadCSV" Content="Refresh / Load CSV" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
                 </Grid>
             </Grid>
             <Grid Margin="205,75,0,0">
-                <ListView x:Name="listView1" HorizontalAlignment="Left" Height="614" VerticalAlignment="Top" Width="1067" SelectionChanged="listView1_SelectionChanged">
+                <ListView x:Name="listView1" HorizontalAlignment="Left" Width="1067">
                     <ListView.View>
                         <GridView x:Name="MyGridView">
                             <GridViewColumn Header="Accountname" DisplayMemberBinding="{Binding accountname}" Width="180" />

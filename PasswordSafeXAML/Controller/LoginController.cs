@@ -15,6 +15,10 @@ namespace PasswordSafeXAML.Controller
 
     public class LoginController
     {
+        public static void saveList(List<LoginModel> list)
+        {
+            // Falls ListView als List hier her gesendet wird
+        }
         public static void newLogin(string accountname, string eMail, string loginname, string password, string website, string description)
         {
 
@@ -27,6 +31,7 @@ namespace PasswordSafeXAML.Controller
                 bool fileExist = File.Exists("LoginDaten.csv");
                 if (fileExist)
                 {
+                    
                     using (var writer = new StreamWriter("LoginDaten.csv", true))
                     {
                         using (var csv = new CsvWriter(writer))
@@ -54,11 +59,6 @@ namespace PasswordSafeXAML.Controller
                     }
                 }
             }
-        }
-
-        public void loadData()
-        {
-            
         }
     }
 }
