@@ -31,6 +31,18 @@ namespace PasswordSafeXAML
             loadData();
         }
 
+        public void refresh()
+        {
+            if(File.Exists("LoginDaten.csv"))
+            {
+                loadData();
+            }
+            else
+            {
+
+            }
+        }
+
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -60,6 +72,8 @@ namespace PasswordSafeXAML
 
                 if (fileExist)
                 {
+                    listView1.Items.Clear();
+                    
                     List<example> values = File.ReadAllLines("LoginDaten.csv")
 
                               .Skip(1)
@@ -71,7 +85,7 @@ namespace PasswordSafeXAML
                     foreach (var item in values)
 
                     {
-
+                        
                         listView1.Items.Add(new { accountname = item.t1, email = item.t2, loginname = item.t3, password = item.t4, website = item.t5, description = item.t6 });
 
                     }
@@ -144,6 +158,21 @@ namespace PasswordSafeXAML
 
 
             //Im selection kommt das ausgewählte schonmal an ^^
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            listView1.Items.RemoveAt(listView1.SelectedIndex);
+
+            // Hier entweder ListView zu List machen und dann an Controller zum Speichern senden oder irgendwie direkt speichern
+
+            List<string> items = new List<string>();
+            foreach (ListViewItem itm in listView1.Items)
+            {
+                items.Add(itm.ToString());
+            }
+
+
         }
     }
 }

@@ -18,7 +18,7 @@
                     <Button Content="Account hinzufügen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,80,42,0" Click="Button_Click"/>
                 </Grid>
                 <Grid>
-                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,185,42,0" Width="110"/>
+                    <Button Content="Account löschen" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,185,42,0" Width="110" Click="Button_Click_5"/>
                 </Grid>
                 <Grid>
                     <Button Content="Username kopieren" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,237,42,0" Width="110" Click="Button_Click_4"/>
@@ -30,7 +30,7 @@
                     <Button Content="Account bearbeiten" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,133,42,0" Width="110"/>
                 </Grid>
                 <Grid>
-                    <Button x:Name="LoadCSV" Content="Load csv" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
+                    <Button x:Name="LoadCSV" Content="Refresh / Load CSV" VerticalAlignment="Top" HorizontalAlignment="Center" Height="46" Margin="48,615,42,0" Width="110" Click="Button_Click_2"/>
                 </Grid>
             </Grid>
             <Grid Margin="205,75,0,0">
